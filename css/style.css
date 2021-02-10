@@ -1,0 +1,114 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .gridLayout {
+      background-color:  #EFF0F3;
+      display: grid;
+      grid-template-rows: 100px 220px 250px 300px 350px 70px;
+      grid-template-columns: 5% 15% 60% 15% 5%;
+        grid-gap: 5px;
+      grid-template-areas: 
+      "header header header header header"
+      "paddingLeft aside-left main main paddingRight"
+      "paddingLeft aside-left case-study-1 case-study-1 paddingRight"
+      "paddingLeft aside-left case-study-2 case-study-2 paddingRight"
+      "paddingLeft aside-left case-study-3 case-study-3 paddingRight"
+      "footer footer footer footer footer"
+    }
+  
+  /* Navigation CSS */ 
+  .header {
+    background-color: #EFF0F3;
+    grid-area: header;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  #navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5%;
+    justify-content: space-between;
+  }
+  #navBar h1 {
+    width: 25%;
+    font-weight: 500;
+  }
+  .topnav {
+    display: block;
+    align-self: center;
+  }
+  .topnav a {
+    float: left;
+    color: teal;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .topnav a:hover {
+    background-color: teal;
+    color: white;
+  }
+  
+  /* Left Rail CSS */
+  .aside-left {
+    grid-area: aside-left;
+    display: flex;
+    justify-content: center;
+  }
+  .left {
+    position: fixed;
+  }
+  
+  /* Main Area CSS */
+  .aside-right {
+   grid-area: aside-right;
+  }
+  
+  .main {
+    grid-area: main;
+  }
+  
+  .case-study-1 {
+    grid-area: case-study-1;
+  }
+  .case-study-2 {
+    grid-area: case-study-2;
+  }
+  .case-study-3 {
+    grid-area: case-study-3;
+  }
+  
+  /* Footer CSS */
+  .footer {
+    grid-area: footer;
+    background-color: #092327;
+    color: #EFF0F3;
+    height: max-content;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .social {
+    margin-right: 5%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  /*Typography CSS */
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+  }
