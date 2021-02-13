@@ -1,3 +1,9 @@
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
   }
@@ -5,15 +11,16 @@ body {
   .gridLayout {
       background-color:  #EFF0F3;
       display: grid;
-      grid-template-rows: 100px 220px 250px 300px 350px 70px;
-      grid-template-columns: 5% 15% 60% 15% 5%;
-        grid-gap: 5px;
+      grid-template-rows: 50px 220px 300px 300px 250px 250px 70px;
+      grid-template-columns: 1fr 20px 4fr;
+      grid-gap: 5px;
       grid-template-areas: 
       "header header header header header"
-      "paddingLeft aside-left main main paddingRight"
-      "paddingLeft aside-left case-study-1 case-study-1 paddingRight"
-      "paddingLeft aside-left case-study-2 case-study-2 paddingRight"
-      "paddingLeft aside-left case-study-3 case-study-3 paddingRight"
+      "left aside-left main main paddingRight"
+      "left aside-left skills skills paddingRight"
+      "left aside-left case-study-1 case-study-1 paddingRight"
+      "left aside-left case-study-2 case-study-2 paddingRight"
+      "left aside-left case-study-3 case-study-3 paddingRight"
       "footer footer footer footer footer"
     }
   
@@ -26,11 +33,14 @@ body {
     top: 0;
     width: 100%;
   }
-  
+  .logo {
+    display: flex;
+    margin-left:4.5em;
+  }
   #navBar {
     display: flex;
     flex-direction: row;
-    margin: 0px 5%;
+  
     justify-content: space-between;
   }
   #navBar h1 {
@@ -43,15 +53,15 @@ body {
   }
   .topnav a {
     float: left;
-    color: teal;
+    color: #0b5351;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1em 1em;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1em;
   }
   .topnav a:hover {
-    background-color: teal;
-    color: white;
+    background-color: #0b5351;
+    color: #EFF0F3;
   }
   
   /* Left Rail CSS */
@@ -59,22 +69,73 @@ body {
     grid-area: aside-left;
     display: flex;
     justify-content: center;
-  }
-  .left {
     position: fixed;
+    margin-top: 7em;
+    margin-left: 2.3em;
   }
   
   /* Main Area CSS */
-  .aside-right {
-   grid-area: aside-right;
-  }
-  
   .main {
     grid-area: main;
+    margin-top: 4em;
+  }
+
+  .sectionHeading {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .skills {
+    grid-area: skills;
+  }
+
+  .flex-container {
+    list-style: none;
+    display: flex;
+    flex-direction:row;
   }
   
+  .flex-start { 
+    justify-content: space-evenly; 
+  }
+  
+  .flex-skill {
+    padding: 1em;
+    width: 14em;
+    height: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(144,194,231,.5);
+    border-radius: 10px;
+  }
+
+  .flex-subskill {
+    list-style: disc;
+    font-weight: normal;
+    width:14em;
+    height:9em;
+    line-height:normal;
+    text-align:left;
+    list-style-position: inside;
+    margin-top: 1.5em;
+    background: rgb(144,194,231,.5);
+    border-radius: 10px;
+  }
+
+  .caseStudy {
+    background: green;
+  }
+  .caseStudyImage {
+    align-self: flex-end;
+  }
+
+
   .case-study-1 {
     grid-area: case-study-1;
+    display: grid;
+    grid-column: 70% 20%;
+    grid-row: auto;
+    
   }
   .case-study-2 {
     grid-area: case-study-2;
@@ -101,14 +162,36 @@ body {
     margin-right: 5%;
   }
   
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
+
   
-  /*Typography CSS */
-  h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
+  /* Typography CSS */
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0b5351;
   }
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #092327;
+  }
+  h3 {
+    font-size: 1.5em;
+    color: #0b5351;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 1.5em;
+    color: #092327;
+  }
+  h5 {
+    font-size: 1em;
+  }
+
+/* RWD CSS */
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
