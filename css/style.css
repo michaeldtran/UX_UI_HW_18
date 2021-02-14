@@ -11,17 +11,17 @@ body {
   .gridLayout {
       background-color:  #EFF0F3;
       display: grid;
-      grid-template-rows: 50px 220px 300px 300px 250px 250px 70px;
-      grid-template-columns: 1fr 20px 4fr;
-      grid-gap: 5px;
+      grid-template-rows: 50px 220px 300px 50px 250px 250px 250px 70px;
+      grid-template-columns: 20% 80%;
       grid-template-areas: 
-      "header header header header header"
-      "left aside-left main main paddingRight"
-      "left aside-left skills skills paddingRight"
-      "left aside-left case-study-1 case-study-1 paddingRight"
-      "left aside-left case-study-2 case-study-2 paddingRight"
-      "left aside-left case-study-3 case-study-3 paddingRight"
-      "footer footer footer footer footer"
+      "header header"
+      "aside-left main"
+      "aside-left skills"
+      "aside-left sectionHeading"
+      "aside-left case-study-1"
+      "aside-left case-study-2"
+      "aside-left case-study-3"
+      "footer footer"
     }
   
   /* Navigation CSS */ 
@@ -40,11 +40,9 @@ body {
   #navBar {
     display: flex;
     flex-direction: row;
-  
     justify-content: space-between;
   }
   #navBar h1 {
-    width: 25%;
     font-weight: 500;
   }
   .topnav {
@@ -82,7 +80,8 @@ body {
 
   .sectionHeading {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+    grid-area: sectionHeading;
   }
 
   .skills {
@@ -93,6 +92,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction:row;
+    
   }
   
   .flex-start { 
@@ -123,19 +123,45 @@ body {
   }
 
   .caseStudy {
-    background: green;
+    border-radius: 10px;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+      "caseStudyContent caseStudyImage"
+      "caseStudySkills  caseStudyImage"
   }
   .caseStudyImage {
-    align-self: flex-end;
+    grid-area: caseStudyImage;
+    background: #4E8098;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .caseStudyContent {
+    grid-area: caseStudyContent;
+  }
+  .caseStudySkills {
+    grid-area: caseStudySkills;
+    font-style:italic;
+  }
+  .caseStudyButton {
+    grid-area: caseStudyButton;
+    border-radius: 20px;
+    border: none;
+    background-color: #4E8098;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    filter: drop-shadow(5px 5px 5px black);
+    font-style: bold;
+    text-align: center;
   }
 
 
   .case-study-1 {
-    grid-area: case-study-1;
-    display: grid;
-    grid-column: 70% 20%;
-    grid-row: auto;
-    
+    grid-area: case-study-1; 
   }
   .case-study-2 {
     grid-area: case-study-2;
@@ -190,7 +216,7 @@ body {
 
 /* RWD CSS */
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600) {
   .column {
     width: 100%;
   }
