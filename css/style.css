@@ -11,7 +11,7 @@ body {
   .gridLayout {
       background-color:  #EFF0F3;
       display: grid;
-      grid-template-rows: 50px 220px 300px 50px 250px 250px 250px 70px;
+      grid-template-rows: 50px 200px 350px 75px repeat(3, 250px) 50px;
       grid-template-columns: 20% 80%;
       grid-template-areas: 
       "header header"
@@ -70,6 +70,7 @@ body {
     position: fixed;
     margin-top: 7em;
     margin-left: 2.3em;
+    width: 20%;
   }
   
   /* Main Area CSS */
@@ -86,13 +87,13 @@ body {
 
   .skills {
     grid-area: skills;
+    width: 100%;
   }
 
   .flex-container {
     list-style: none;
     display: flex;
     flex-direction:row;
-    
   }
   
   .flex-start { 
@@ -138,6 +139,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+    max-width: 100%;
   }
   .caseStudyContent {
     grid-area: caseStudyContent;
@@ -216,8 +218,14 @@ body {
 
 /* RWD CSS */
 
-@media only screen and (max-width: 600) {
+@media only screen and (max-width: 600px){
   .column {
     width: 100%;
+  }
+  .flex-container .flex-skill .flex-start .flex-subskill{
+    flex-direction: column;
+  }
+  .skills {
+    flex-direction: column;
   }
 }
