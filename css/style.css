@@ -34,6 +34,28 @@ body {
 .topnav .icon {
   display: none;
 }
+.logo {
+  display: flex;
+  margin-left: 2em;
+}
+.wrapper {
+  display: flex;
+  position:relative;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  color: #0B5351;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
