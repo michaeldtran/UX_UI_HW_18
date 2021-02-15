@@ -14,9 +14,9 @@ body {
 .topnav {
   display: block;
   align-self: center;
+  align-content: center;
 }
 .topnav a {
-  float: right;
   color: #0B5351;
   text-align: center;
   padding: 14px 16px;
@@ -54,5 +54,6 @@ body {
     float: none;
     display: block;
     text-align: right;
+    align-self: center;
   }
 }

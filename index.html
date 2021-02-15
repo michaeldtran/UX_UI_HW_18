@@ -15,7 +15,7 @@
     <div class="logo">
         <img src="images/Logo.png">
     </div>
-    <div class="topnav">
+    <div class="topnav" id="myTopnav">
         <a class="active" href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#about">Contact</a>
@@ -122,5 +122,15 @@
 </section>
 
 </div>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
 </body>
 </html>
