@@ -292,6 +292,9 @@ body {
   .case-study-1 {
     padding-top: 8em;
   }
+  .footer {
+    margin-top: 51px;
+  }
 }
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
