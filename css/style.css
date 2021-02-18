@@ -266,7 +266,7 @@ body {
     margin-top: 13em;
     display: block;
   }
-  .flex-container .flex-skill .flex-start .flex-subskill{
+  .flex-subskill  {
     flex-direction: column;
     width: 100%;
   }
