@@ -161,7 +161,6 @@ body {
     font-style:italic;
   }
   .caseStudyButton {
-    grid-area: caseStudyButton;
     border-radius: 20px;
     border: none;
     background-color: #4E8098;
