@@ -237,7 +237,7 @@ body {
   .gridLayout {
     display: grid;
     grid-template-rows: 50px 250px 200px 350px 75px repeat(3, auto) 50px 50px;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-template-areas: 
     "header"
     "aside-left" 
@@ -268,7 +268,7 @@ body {
   }
   .flex-subskill  {
     flex-direction: column;
-    width: 100%;
+    width: 25vw;
   }
   .skills {
     flex-direction: column;
